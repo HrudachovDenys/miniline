@@ -1,6 +1,7 @@
 <% layout('./layouts/main.layout') -%>
 <% block('title', 'Login') -%>
 
+<h2><%-message %></h2>
 <form action="/auth/login", method="POST">
     <div>
         <label>Username</label>

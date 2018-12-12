@@ -1,5 +1,7 @@
 const path = require("path");
 const bodyParser = require('body-parser');
+const express = require('express');
+const config = require('../config');
 
 class GlobalMiddleware {
     static async handle(app) { 

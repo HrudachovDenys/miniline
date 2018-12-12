@@ -55,10 +55,10 @@ schema.pre('save', function(next) {
     });
 });
 
-schema.methods.checkPass = function(plainPass, cb) {
+schema.methods.checkPass = function(plainPass, callback) {
     bcrypt.compare(plainPass, this.password, (err, res) => {
-        if (err) return cb(err);
-        cb(null, res);
+        if (err) return callback(err);
+        callback(null, res);
     });
 };
 

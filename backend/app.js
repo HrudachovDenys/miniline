@@ -6,7 +6,9 @@ const config = require("./config");
 
 const {
     GlobalMiddleware
-} = require('./middlewares');
+ } = require('./middlewares');
+
+console.log(GlobalMiddleware);
 
 GlobalMiddleware.handle(app);
 
@@ -14,11 +16,6 @@ const {
     WebRouter,
     ApiRouter
 } = require('./routers');
-
-/*
-app.use('/', WebRouter);
-app.use('/api', ApiRouter);
-*/
 
 app.use('/', WebRouter);
 
